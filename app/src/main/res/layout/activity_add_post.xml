@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      tools:context=".ui.AddPostActivity"
+      >
+
+ <androidx.core.widget.NestedScrollView
+     android:layout_width="match_parent"
+     android:layout_height="680dp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+
+   <!-- **************JOB DETAILS************* -->
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:layout_gravity="center"
+       android:background="@android:color/holo_blue_light"
+       android:gravity="center"
+       android:text="Job Details"
+       android:textAlignment="center"
+       android:textColor="@android:color/white"
+       android:textSize="20sp"
+       android:textStyle="bold" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="8dp"
+       android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Job Title*"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Job Desciption (optional)"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:hint="Write about the Job"
+        android:inputType="textMultiLine"
+        android:lines="5" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salary*"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postSalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location* (eg: Dhaka or Gulshan)"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Application Deadline* (dd/mm/yyyy)"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postDeadLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+   </LinearLayout>
+
+
+   <!-- **************ABOUT THE COMPANY************* -->
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:layout_gravity="center"
+       android:background="@android:color/holo_blue_light"
+       android:gravity="center"
+       android:text="About the Company"
+       android:textAlignment="center"
+       android:textColor="@android:color/white"
+       android:textSize="20sp"
+       android:textStyle="bold" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="8dp"
+       android:orientation="vertical">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <EditText
+        android:id="@+id/postCompanyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:hint="Write Company Name"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+   </LinearLayout>
+
+   <!-- **************CANDIDATE PREFERENCE************* -->
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:layout_gravity="center"
+       android:background="@android:color/holo_blue_light"
+       android:gravity="center"
+       android:text="Candidate Preference"
+       android:textAlignment="center"
+       android:textColor="@android:color/white"
+       android:textSize="20sp"
+       android:textStyle="bold" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="8dp"
+       android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minimum Qualification* :"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <CheckBox
+        android:id="@+id/ap_cb_HSC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HSC" />
+
+    <CheckBox
+        android:id="@+id/ap_cb_Bachelor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bachelor/Honors" />
+
+    <CheckBox
+        android:id="@+id/ap_cb_Masters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masters" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+   </LinearLayout>
+
+   <!-- **************CONTACT DETAILS************* -->
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:layout_gravity="center"
+       android:background="@android:color/holo_blue_light"
+       android:gravity="center"
+       android:text="Contact Details"
+       android:textAlignment="center"
+       android:textColor="@android:color/white"
+       android:textSize="20sp"
+       android:textStyle="bold" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="8dp"
+       android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Name*"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postContactName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Phone Number*"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Email*"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postContactEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+   </LinearLayout>
+
+   <Button
+       android:id="@+id/submitPostBtn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:background="@drawable/button_background"
+       android:text="Add Post"
+       android:textColor="@android:color/holo_blue_light"/>
+
+   <Space
+       android:layout_width="match_parent"
+       android:layout_height="20dp" />
+
+
+  </LinearLayout>
+
+ </androidx.core.widget.NestedScrollView>
+
+ <com.google.android.material.bottomnavigation.BottomNavigationView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/bottom_nav"
+     app:itemBackground="@android:color/holo_blue_light"
+     app:itemTextColor="@drawable/selector"
+     app:itemIconTint="@drawable/selector"
+     app:menu="@menu/menu_navigation"
+     android:layout_alignParentBottom="true" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PartTimers</string>
+
+    <string name="PTLogo">LOGO</string>
+    <string name="part_timers">Part-Timers</string>
+    <string name="logoDescription">An online based platform for students to find part-time jobs effortlessly</string>
+    <string name="create_account">Create an Account</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="login_here">Login here!</string>
+
+    <string name="loginBackground">Login Background</string>
+    <string name="emailLogin">Email</string>
+    <string name="passwordLogin">Password</string>
+    <string name="action_sign_in_short">hidePasswordLogin</string>
+    <string name="login">Login</string>
+
+    <string name="usernameSignup">Username</string>
+    <string name="emailSignup">Email</string>
+    <string name="passwordSignup">Password</string>
+    <string name="confirm_passwordSignup">Confirm Password</string>
+    <string name="signup">Signup</string>
+</resources>

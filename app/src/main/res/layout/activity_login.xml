@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+
+        <ImageView
+            android:layout_marginTop="-30dp"
+            android:id="@+id/loginImageView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:contentDescription="@string/loginBackground"
+            app:srcCompat="@drawable/loginbackground" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/userLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="291dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:fontFamily="serif"
+        android:hint="@string/emailLogin"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:id="@+id/passwordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="351dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/passwordLogin"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordLogin"
+        android:background="@drawable/button_background"
+        android:fontFamily="serif"
+        android:text="@string/login"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/loginBackButton"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_button_black_icon" />
+
+
+</RelativeLayout>

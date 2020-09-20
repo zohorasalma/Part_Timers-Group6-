@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:background="@android:color/holo_blue_light"
+    >
+
+    <RelativeLayout
+        android:id="@+id/signupImageViewRL"
+        android:layout_width="match_parent"
+        android:layout_height="236dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/signupImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-30dp"
+            android:contentDescription="@string/loginBackground"
+            app:srcCompat="@drawable/signupbackground" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/usernameSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:layout_below="@+id/signupImageViewRL"
+        android:autofillHints=""
+        android:fontFamily="serif"
+        android:hint="@string/usernameSignup"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"/>
+
+    <EditText
+        android:id="@+id/emailSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/usernameSignup"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:fontFamily="serif"
+        android:hint="@string/emailSignup"
+        android:padding="10dp"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:id="@+id/passwordSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailSignup"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/passwordSignup"
+        android:padding="10dp"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:id="@+id/repasswordSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordSignup"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/confirm_passwordSignup"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repasswordSignup"
+        android:layout_marginTop="20dp"
+        android:layout_margin="24dp"
+        android:padding="10dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="serif"
+        android:text="@string/signup"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/signupBackButton"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_button_white_icon" />
+
+</RelativeLayout>
