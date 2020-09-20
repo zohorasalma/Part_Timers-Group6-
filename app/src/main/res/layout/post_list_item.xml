@@ -2,27 +2,86 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="?android:attr/listPreferredItemHeightLarge"
+    android:layout_height="wrap_content"
     android:background="@drawable/border">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
+        android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:contentDescription="Icon" />
-
+        android:text="Job Post Title :"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtviewTitle"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_toEndOf="@id/imageView"
-        android:layout_toRightOf="@id/imageView"
-        android:gravity="center_vertical"
-        android:textSize="16sp"/>
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtTitle"
+        android:text="sales man"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location :"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtTitle"/>
+    <TextView
+        android:id="@+id/txtviewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtLocation"
+        android:layout_below="@+id/txtviewTitle"
+        android:text="dhaka"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <TextView
+        android:id="@+id/txtDeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Application Deadline :"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtLocation"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtviewDeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtDeadline"
+        android:layout_below="@+id/txtviewLocation"
+        android:text="21/01/21"
+        android:textSize="16sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/viewMoreBtn"
+        android:layout_toRightOf="@+id/txtDeadline"
+        android:layout_below="@id/txtviewLocation"
+        android:layout_marginLeft="100dp"
+        android:text="View More"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="10dp"
+        android:textStyle="italic"
+        android:textColor="@color/colorPrimary"
+        />
 
 </RelativeLayout>

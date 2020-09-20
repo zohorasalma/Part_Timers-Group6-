@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MyProfileActivity"></activity>
+        <activity android:name=".ui.ViewMoreActivity"></activity>
+        <activity android:name=".ui.MyProfileActivity" />
         <activity android:name=".ui.AddPostActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity" />

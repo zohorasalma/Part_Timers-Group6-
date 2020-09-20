@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ViewMoreActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/LinearBorder"
+        android:orientation="horizontal"
+        android:background="#19BFAF"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Job Post Details"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Post Title :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/LinearBorder"
+
+        />
+    <TextView
+        android:id="@+id/txtviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtTitle"
+        android:text="sales man"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:layout_below="@id/LinearBorder"/>
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtTitle"/>
+    <TextView
+        android:id="@+id/txtviewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtLocation"
+        android:layout_below="@+id/txtviewTitle"
+        android:text="dhaka"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtLocation"
+  />
+    <TextView
+        android:id="@+id/txtviewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDescription"
+        android:text="bla bla blaaaaaaaaaaaaaaaaaaaaaaa"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <TextView
+        android:id="@+id/txtDeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Application Deadline :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtviewDescription"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtviewDeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtDeadline"
+        android:layout_below="@+id/txtviewDescription"
+        android:text="21/01/21"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <TextView
+        android:id="@+id/txtSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salary :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtDeadline"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtviewSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtSalary"
+        android:layout_below="@+id/txtviewDeadline"
+        android:text="20,000/-"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <TextView
+        android:id="@+id/txtminQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimum Qualification :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtSalary"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtviewMinQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtminQ"
+        android:layout_below="@+id/txtviewSalary"
+        android:text="HSC"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <LinearLayout
+        android:id="@+id/LinearContact"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/txtviewMinQ"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Details"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="22sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Name :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:layout_below="@id/LinearContact"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/txtviewContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtContactName"
+        android:layout_below="@+id/LinearContact"
+        android:text="blaaaaa"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <TextView
+        android:id="@+id/txtContactPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Phone :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtContactName"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/txtviewContactPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtContactPhone"
+        android:layout_below="@+id/txtviewContactName"
+        android:text="12345678"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <TextView
+        android:id="@+id/txtContactEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Email :"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:layout_below="@id/txtContactPhone"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/txtviewContactEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtContactEmail"
+        android:layout_below="@+id/txtviewContactPhone"
+        android:text="2323@gmail.com"
+        android:textSize="20sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/ApplyBtn"
+        android:text="Apply"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
