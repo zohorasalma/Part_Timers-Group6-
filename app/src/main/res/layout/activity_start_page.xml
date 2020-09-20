@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:clickable="true"
+    tools:context=".StartPageActivity"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/startPagePTTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_toRightOf="@+id/logoImageView"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="serif"
+        android:text="@string/part_timers"
+        android:textColor="#003366"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="200dp"
+        android:contentDescription="@string/PTLogo"
+        app:srcCompat="@drawable/ptlogo" />
+
+    <TextView
+        android:id="@+id/startPagePTDescriptionTextView"
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startPagePTTextView"
+        android:layout_toRightOf="@+id/logoImageView"
+        android:layout_marginLeft="10dp"
+        android:text="@string/logoDescription"
+        android:textColor="#003366"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/signUpLinkButton"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/startPagePTDescriptionTextView"
+        app:srcCompat="@drawable/button_background"
+        android:background="@drawable/button_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:fontFamily="serif"
+        android:text="@string/create_account"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/startPageAskingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpLinkButton"
+        android:layout_marginTop="8dp"
+        android:layout_alignLeft="@+id/signUpLinkButton"
+        android:text="@string/already_have_an_account"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/loginLinkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/startPageAskingTextView"
+        android:layout_below="@id/signUpLinkButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="6dp"
+        android:text="@string/login_here"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:onClick="onLoginClick"/>
+
+</RelativeLayout>
