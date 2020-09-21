@@ -82,7 +82,6 @@ public class MyJobPostAdapter extends RecyclerView.Adapter<MyJobPostAdapter.View
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
         public TextView title,location,deadline;
-        public RelativeLayout relativeLayout;
         public Button viewMoreBtn;
 
         public ViewHolder(View itemView)
@@ -92,7 +91,6 @@ public class MyJobPostAdapter extends RecyclerView.Adapter<MyJobPostAdapter.View
             this.location = (TextView) itemView.findViewById(R.id.txtviewLocation);
             this.deadline = itemView.findViewById(R.id.txtviewDeadline);
             this.viewMoreBtn = itemView.findViewById(R.id.viewMoreBtn);
-            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
         }
     }
 }

@@ -27,6 +27,7 @@ import com.example.parttimers.adapter.MyJobPostAdapter;
 import com.example.parttimers.model.JobPost;
 import com.example.parttimers.ui.AddPostActivity;
 import com.example.parttimers.ui.MyProfileActivity;
+import com.example.parttimers.utility.ItemOffsetDecoration;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
@@ -132,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerViewPosts);
         adapter = new MyJobPostAdapter(this,jobPostList);
         recyclerView.setHasFixedSize(true);
+        ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(this, R.dimen.eight_dp);
+        recyclerView.addItemDecoration(itemDecoration);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
         retrieveData();
