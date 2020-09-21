@@ -87,7 +87,7 @@ public class SignupActivity extends AppCompatActivity {
                     ed_username.setText("");
                     ed_email.setText("");
                     ed_password.setText("");
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                     ApplicationData.user_email= str_email;
                     Toast.makeText(SignupActivity.this, response, Toast.LENGTH_SHORT).show();
                 }

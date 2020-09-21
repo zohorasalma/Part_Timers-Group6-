@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".PostSuccessfulAnimationActivity"></activity>
+        <activity android:name=".PostSuccessfulAnimationActivity"/>
 
-        <activity android:name=".ui.ViewMoreActivity"></activity>
->
+        <activity android:name=".ui.ViewMoreActivity"/>
+
         <activity android:name=".ui.MyProfileActivity" />
         <activity android:name=".ui.AddPostActivity" />
         <activity android:name=".SignupActivity" />
@@ -28,11 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
