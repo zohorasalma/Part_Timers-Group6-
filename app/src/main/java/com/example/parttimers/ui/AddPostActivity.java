@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,8 +21,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.parttimers.MainActivity;
+import com.example.parttimers.PostSuccessfulAnimationActivity;
 import com.example.parttimers.R;
 import com.example.parttimers.SignupActivity;
+import com.example.parttimers.StartPageActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.HashMap;
@@ -29,7 +32,8 @@ import java.util.Map;
 
 public class AddPostActivity extends AppCompatActivity
 {
-    private EditText ed_title,ed_location,ed_description,ed_salary,ed_deadLine,ed_companyName,ed_mQ;
+    private EditText ed_title,ed_location,ed_description,ed_salary,ed_deadLine,ed_companyName;
+    private CheckBox cbHSC,cbBachelor,cbMasters;
     private String title,location,description,companyName,minQ,salary,deadLine;
     private String url = "https://zohorasalmaisdproject.000webhostapp.com/AddPost.php";
 
@@ -40,6 +44,15 @@ public class AddPostActivity extends AppCompatActivity
         setContentView(R.layout.activity_add_post);
         getSupportActionBar().hide();
 
+        Button submitButton = (Button) findViewById(R.id.submitPostBtn);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent submitButtonIntent = new Intent(AddPostActivity.this, PostSuccessfulAnimationActivity.class);
+                startActivity(submitButtonIntent);
+            }
+        });
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         ed_title = findViewById(R.id.postTitle);
         ed_location = findViewById(R.id.postLocation);
@@ -47,7 +60,9 @@ public class AddPostActivity extends AppCompatActivity
         ed_description = findViewById(R.id.postDescription);
         ed_salary = findViewById(R.id.postSalary);
         ed_companyName = findViewById(R.id.postCompanyName);
-        ed_mQ = findViewById(R.id.postMinimumQ);
+        cbHSC = findViewById(R.id.ap_cb_HSC);
+        cbBachelor = findViewById(R.id.ap_cb_Bachelor);
+        cbMasters = findViewById(R.id.ap_cb_Masters);
 
         bottomNavigationView.setSelectedItemId(R.id.addPost);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -93,7 +108,7 @@ public class AddPostActivity extends AppCompatActivity
             salary = ed_salary.getText().toString().trim();
             deadLine = ed_deadLine.getText().toString().trim();
             companyName = ed_companyName.getText().toString().trim();
-            minQ = ed_mQ.getText().toString().trim();
+            //minQ = ed_mQ.getText().toString().trim();
 
 
 
@@ -107,7 +122,7 @@ public class AddPostActivity extends AppCompatActivity
                     ed_description.setText("");
                     ed_deadLine.setText("");
                     ed_companyName.setText("");
-                    ed_mQ.setText("");
+                    //ed_mQ.setText("");
 
                     Toast.makeText(AddPostActivity.this, response, Toast.LENGTH_SHORT).show();
                 }
