@@ -15,13 +15,10 @@
             android:layout_height="wrap_content"
 
             >
-
-
-
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/photo"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -198,9 +195,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/saveChangesBtn"
-                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/ed_interest"
+                android:layout_marginTop="20dp"
                 android:text="Save Changes"
-                android:background="@drawable/button_background"/>
+                android:background="@drawable/button_background"
+                android:onClick="updateProfile"/>
 
 
 
@@ -210,15 +209,5 @@
     </ScrollView>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottom_nav"
-        app:itemBackground="@android:color/holo_blue_light"
-        app:itemTextColor="@drawable/selector"
-        app:itemIconTint="@drawable/selector"
-        app:menu="@menu/menu_navigation"
-        android:layout_alignParentBottom="true"
-        />
 
 </RelativeLayout>
