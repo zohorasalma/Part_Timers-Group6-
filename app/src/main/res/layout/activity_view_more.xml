@@ -254,10 +254,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/ApplyBtn"
-        android:text="Apply"
+        android:text="Apply Via Email"
         android:background="@drawable/button_background"
         android:textColor="@android:color/white"
         android:textSize="22sp"
+        android:onClick="sendEmail"
         android:layout_alignParentBottom="true"/>
 
 

@@ -58,7 +58,10 @@ public class MyProfileActivity extends AppCompatActivity
         setContentView(R.layout.activity_my_profile);
         getSupportActionBar().hide();
         retrieveData();
-       // BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        final ProgressDialog progressDialog = new ProgressDialog(MyProfileActivity.this);
+        progressDialog.setMessage("Please Wait..");
+        progressDialog.show();
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         userName = findViewById(R.id.userNameTV);
         education = findViewById(R.id.education);
         skill = findViewById(R.id.skill);
@@ -70,11 +73,13 @@ public class MyProfileActivity extends AppCompatActivity
         ed_skill = findViewById(R.id.ed_skill);
         ed_interest = findViewById(R.id.ed_interest);
 
+
         User userD = ApplicationData.userDetails;
         userName.setText(userD.getUser_name());
         education.setText(userD.getEducation());
         skill.setText(userD.getSkill());
         interest.setText(userD.getInterest());
+        progressDialog.dismiss();
 
         editEducation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,7 +128,7 @@ public class MyProfileActivity extends AppCompatActivity
             }
         });
 
-     /*   bottomNavigationView.setSelectedItemId(R.id.profile);
+        bottomNavigationView.setSelectedItemId(R.id.profile);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
@@ -143,7 +148,7 @@ public class MyProfileActivity extends AppCompatActivity
                 }
                 return false;
             }
-        });*/
+        });
     }
     public void retrieveData()
     {
@@ -216,7 +221,7 @@ public class MyProfileActivity extends AppCompatActivity
         final String intereststr = ed_interest.getText().toString();
 
         StringRequest request = new StringRequest(Request.Method.POST,
-                "https://zohorasalmaisdproject.000webhostapp.com/ updateProfile.php",
+                "https://zohorasalmaisdproject.000webhostapp.com/updateProfile.php",
                 new Response.Listener<String>()
                 {
                     @Override

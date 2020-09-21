@@ -2,7 +2,9 @@ package com.example.parttimers.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.parttimers.R;
@@ -45,5 +47,16 @@ public class ViewMoreActivity extends AppCompatActivity
         contactPhone.setText(jobPost.getContactPhone().toString());
         minQ.setText(jobPost.getMinimumQ().toString());
 
+    }
+
+    public void sendEmail(View view)
+    {
+        String recipientList = contactEmail.getText().toString();
+        String[] recipients = recipientList.split(",");
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL, recipients);
+        intent.setType("message/rfc822");
+        startActivity(Intent.createChooser(intent, "Choose an email client"));
     }
 }

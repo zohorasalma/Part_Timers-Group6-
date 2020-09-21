@@ -215,7 +215,8 @@
                 android:layout_gravity="center"
                 android:text="Save Changes"
                 android:background="@drawable/button_background"
-                android:textColor="@android:color/holo_blue_light"/>
+                android:textColor="@android:color/holo_blue_light"
+                android:onClick="updateProfile"/>
 
             <Space
                 android:layout_width="match_parent"
