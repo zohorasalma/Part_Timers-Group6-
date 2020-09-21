@@ -33,7 +33,7 @@ import java.util.Map;
 public class AddPostActivity extends AppCompatActivity
 {
     private EditText ed_title,ed_location,ed_description,ed_salary,ed_deadLine,ed_contactName,ed_contactPhone,ed_contactEmail;
-    private CheckBox cbHSC,cbBachelor,cbMasters;
+    private CheckBox cbHSC,cbBachelor,cbMasters,cbOthers;
     private String title,location,description,minQ,salary,deadLine,contactName,contactEmail,contactPhone;
     private String url = "https://zohorasalmaisdproject.000webhostapp.com/AddPost.php";
 
@@ -62,6 +62,7 @@ public class AddPostActivity extends AppCompatActivity
         cbHSC = findViewById(R.id.ap_cb_HSC);
         cbBachelor = findViewById(R.id.ap_cb_Bachelor);
         cbMasters = findViewById(R.id.ap_cb_Masters);
+        cbOthers = findViewById(R.id.ap_cb_Others);
         ed_contactEmail = findViewById(R.id.postContactEmail);
         ed_contactPhone = findViewById(R.id.postPhoneNumber);
 
@@ -124,6 +125,10 @@ public class AddPostActivity extends AppCompatActivity
             {
                 minQ = cbMasters.getText().toString();
             }
+            else if(cbOthers.isChecked())
+            {
+                minQ = cbOthers.getText().toString();
+            }
 
 
             StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -136,7 +141,7 @@ public class AddPostActivity extends AppCompatActivity
                     ed_description.setText("");
                     ed_deadLine.setText("");
                     ed_contactName.setText("");
-                    ed_contactEmail.setText("");
+                    ed_contactPhone.setText("");
                     ed_contactEmail.setText("");
 
                     Toast.makeText(AddPostActivity.this, response, Toast.LENGTH_SHORT).show();

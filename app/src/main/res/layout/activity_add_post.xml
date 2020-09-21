@@ -227,6 +227,12 @@
         android:layout_height="wrap_content"
         android:text="Masters" />
 
+    <CheckBox
+        android:id="@+id/ap_cb_Others"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Others" />
+
 
     <Space
         android:layout_width="match_parent"
