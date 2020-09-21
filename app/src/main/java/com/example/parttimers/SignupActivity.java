@@ -17,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.parttimers.utility.ApplicationData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -87,6 +88,7 @@ public class SignupActivity extends AppCompatActivity {
                     ed_email.setText("");
                     ed_password.setText("");
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    ApplicationData.user_email= str_email;
                     Toast.makeText(SignupActivity.this, response, Toast.LENGTH_SHORT).show();
                 }
             },new Response.ErrorListener(){
@@ -114,7 +116,6 @@ public class SignupActivity extends AppCompatActivity {
 
             RequestQueue requestQueue = Volley.newRequestQueue(SignupActivity.this);
             requestQueue.add(request);
-
 
         }
 

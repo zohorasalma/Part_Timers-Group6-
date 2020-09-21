@@ -17,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.parttimers.utility.ApplicationData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -81,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         ed_email.setText("");
                         ed_password.setText("");
+                        ApplicationData.user_email = str_email;
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         Toast.makeText(LoginActivity.this, response, Toast.LENGTH_SHORT).show();
                     }
