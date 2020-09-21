@@ -1,27 +1,34 @@
 package com.example.parttimers.adapter;
 
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.parttimers.R;
 import com.example.parttimers.model.JobPost;
+import com.example.parttimers.ui.ViewMoreActivity;
+import com.example.parttimers.utility.ApplicationData;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyJobPostAdapter extends RecyclerView.Adapter<MyJobPostAdapter.ViewHolder>
 {
+    Context context;
     private List<JobPost> jobPosts;
 
     // RecyclerView recyclerView;
-    public MyJobPostAdapter(List<JobPost> jobPosts)
+    public MyJobPostAdapter(Context context,List<JobPost> jobPosts)
     {
+        this.context = context;
         this.jobPosts = jobPosts;
     }
 
@@ -42,15 +49,21 @@ public class MyJobPostAdapter extends RecyclerView.Adapter<MyJobPostAdapter.View
             int position)
     {
         final JobPost jobPost = jobPosts.get(position);
-        holder.textView.setText(jobPosts.get(position).getTitle());
-        holder.relativeLayout.setOnClickListener(new View.OnClickListener()
+        holder.title.setText(jobPosts.get(position).getTitle());
+        holder.location.setText(jobPosts.get(position).getLocation());
+        holder.deadline.setText(jobPosts.get(position).getDeadline());
+        holder.viewMoreBtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Toast.makeText(view.getContext(), "click on item: " + jobPost.getTitle(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(context, ViewMoreActivity.class);
+                context.startActivity(intent);
+                ApplicationData.jobPostDetails = jobPost;
+
             }
         });
+
     }
 
 
@@ -60,17 +73,25 @@ public class MyJobPostAdapter extends RecyclerView.Adapter<MyJobPostAdapter.View
         return jobPosts.size();
     }
 
+    public void filterList(ArrayList<JobPost> filteredList)
+    {
+        jobPosts = filteredList;
+        notifyDataSetChanged();
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
-        public ImageView imageView;
-        public TextView textView;
+        public TextView title,location,deadline;
         public RelativeLayout relativeLayout;
+        public Button viewMoreBtn;
 
         public ViewHolder(View itemView)
         {
             super(itemView);
-            this.imageView = (ImageView) itemView.findViewById(R.id.imageView);
-            this.textView = (TextView) itemView.findViewById(R.id.textView);
+            this.title =  itemView.findViewById(R.id.txtviewTitle);
+            this.location = (TextView) itemView.findViewById(R.id.txtviewLocation);
+            this.deadline = itemView.findViewById(R.id.txtviewDeadline);
+            this.viewMoreBtn = itemView.findViewById(R.id.viewMoreBtn);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
         }
     }

@@ -2,17 +2,7 @@ package com.example.parttimers.model;
 
 public class JobPost
 {
-    public String getId()
-    {
-        return id;
-    }
-
-    public void setId(String id)
-    {
-        this.id = id;
-    }
-
-    private String id, title,location,description,salary,deadline,companyName,minimumQ;
+    private String id, title,location,description,salary,deadline,contactName,contactEmail,contactPhone,minimumQ;
 
     public JobPost(
             String id,
@@ -21,7 +11,9 @@ public class JobPost
             String description,
             String salary,
             String deadline,
-            String companyName,
+            String contactName,
+            String contactEmail,
+            String contactPhone,
             String minimumQ)
     {
         this.id = id;
@@ -30,12 +22,24 @@ public class JobPost
         this.description = description;
         this.salary = salary;
         this.deadline = deadline;
-        this.companyName = companyName;
+        this.contactName = contactName;
+        this.contactEmail = contactEmail;
+        this.contactPhone = contactPhone;
         this.minimumQ = minimumQ;
     }
 
     public JobPost()
     {
+    }
+
+    public String getId()
+    {
+        return id;
+    }
+
+    public void setId(String id)
+    {
+        this.id = id;
     }
 
     public String getTitle()
@@ -88,14 +92,34 @@ public class JobPost
         this.deadline = deadline;
     }
 
-    public String getCompanyName()
+    public String getContactName()
     {
-        return companyName;
+        return contactName;
     }
 
-    public void setCompanyName(String companyName)
+    public void setContactName(String contactName)
     {
-        this.companyName = companyName;
+        this.contactName = contactName;
+    }
+
+    public String getContactEmail()
+    {
+        return contactEmail;
+    }
+
+    public void setContactEmail(String contactEmail)
+    {
+        this.contactEmail = contactEmail;
+    }
+
+    public String getContactPhone()
+    {
+        return contactPhone;
+    }
+
+    public void setContactPhone(String contactPhone)
+    {
+        this.contactPhone = contactPhone;
     }
 
     public String getMinimumQ()

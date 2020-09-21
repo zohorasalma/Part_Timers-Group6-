@@ -32,9 +32,9 @@ import java.util.Map;
 
 public class AddPostActivity extends AppCompatActivity
 {
-    private EditText ed_title,ed_location,ed_description,ed_salary,ed_deadLine,ed_companyName;
+    private EditText ed_title,ed_location,ed_description,ed_salary,ed_deadLine,ed_contactName,ed_contactPhone,ed_contactEmail;
     private CheckBox cbHSC,cbBachelor,cbMasters;
-    private String title,location,description,companyName,minQ,salary,deadLine;
+    private String title,location,description,minQ,salary,deadLine,contactName,contactEmail,contactPhone;
     private String url = "https://zohorasalmaisdproject.000webhostapp.com/AddPost.php";
 
     @Override
@@ -48,8 +48,7 @@ public class AddPostActivity extends AppCompatActivity
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent submitButtonIntent = new Intent(AddPostActivity.this, PostSuccessfulAnimationActivity.class);
-                startActivity(submitButtonIntent);
+                SubmitPost(v);
             }
         });
 
@@ -59,10 +58,13 @@ public class AddPostActivity extends AppCompatActivity
         ed_deadLine = findViewById(R.id.postDeadLine);
         ed_description = findViewById(R.id.postDescription);
         ed_salary = findViewById(R.id.postSalary);
-        ed_companyName = findViewById(R.id.postCompanyName);
+        ed_contactName = findViewById(R.id.postContactName);
         cbHSC = findViewById(R.id.ap_cb_HSC);
         cbBachelor = findViewById(R.id.ap_cb_Bachelor);
         cbMasters = findViewById(R.id.ap_cb_Masters);
+        ed_contactEmail = findViewById(R.id.postContactEmail);
+        ed_contactPhone = findViewById(R.id.postPhoneNumber);
+
 
         bottomNavigationView.setSelectedItemId(R.id.addPost);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -107,9 +109,21 @@ public class AddPostActivity extends AppCompatActivity
             description = ed_description.getText().toString().trim();
             salary = ed_salary.getText().toString().trim();
             deadLine = ed_deadLine.getText().toString().trim();
-            companyName = ed_companyName.getText().toString().trim();
-            //minQ = ed_mQ.getText().toString().trim();
-
+            contactName = ed_contactName.getText().toString().trim();
+            contactEmail = ed_contactEmail.getText().toString().trim();
+            contactPhone = ed_contactPhone.getText().toString().trim();
+            if(cbHSC.isChecked())
+            {
+                minQ = cbHSC.getText().toString();
+            }
+            else if (cbBachelor.isChecked())
+            {
+                minQ = cbBachelor.getText().toString();
+            }
+            else if(cbMasters.isChecked())
+            {
+                minQ = cbMasters.getText().toString();
+            }
 
 
             StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -121,10 +135,13 @@ public class AddPostActivity extends AppCompatActivity
                     ed_salary.setText("");
                     ed_description.setText("");
                     ed_deadLine.setText("");
-                    ed_companyName.setText("");
-                    //ed_mQ.setText("");
+                    ed_contactName.setText("");
+                    ed_contactEmail.setText("");
+                    ed_contactEmail.setText("");
 
                     Toast.makeText(AddPostActivity.this, response, Toast.LENGTH_SHORT).show();
+                    Intent submitButtonIntent = new Intent(AddPostActivity.this, PostSuccessfulAnimationActivity.class);
+                    startActivity(submitButtonIntent);
                 }
             },new Response.ErrorListener(){
 
@@ -146,7 +163,9 @@ public class AddPostActivity extends AppCompatActivity
                     params.put("description",description);
                     params.put("salary",salary);
                     params.put("deadline",deadLine);
-                    params.put("companyName",companyName);
+                    params.put("contactName",contactName);
+                    params.put("contactEmail",contactEmail);
+                    params.put("contactPhone",contactPhone);
                     params.put("minQ",minQ);
 
                     return params;
