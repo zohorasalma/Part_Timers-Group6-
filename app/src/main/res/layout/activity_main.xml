@@ -54,13 +54,23 @@
             android:visibility="invisible"/>
 
     </RelativeLayout>
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearBorder"
+        android:layout_marginBottom="80dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
    <androidx.recyclerview.widget.RecyclerView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:id="@+id/recyclerViewPosts"
        android:layout_below="@+id/LinearBorder"
        android:layout_marginTop="10dp"/>
+    </ScrollView>
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
